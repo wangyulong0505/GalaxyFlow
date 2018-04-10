@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Abp.Domain.Entities;
+using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace GalaxyFlow.Entities
 {
-    class DocumentsReadUsers
+    public class DocumentsReadUsers : Entity<Guid>
     {
+        //
     }
 }

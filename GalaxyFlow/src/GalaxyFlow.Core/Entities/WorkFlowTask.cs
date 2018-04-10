@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GalaxyFlow.Entities
 {
-    class WorkFlowTask
+    public class WorkFlowTask
     {
     }
 }

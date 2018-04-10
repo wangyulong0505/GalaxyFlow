@@ -1,5 +1,6 @@
 ﻿using Abp.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using GalaxyFlow.Entities;
 
 namespace GalaxyFlow.EntityFrameworkCore
 {
@@ -11,6 +12,12 @@ namespace GalaxyFlow.EntityFrameworkCore
             : base(options)
         {
 
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            //modelBuilder.Entity<Product>().Property(x => x.Price).HasPrecision(18, 4);
         }
     }
 }

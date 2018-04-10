@@ -1,10 +1,66 @@
-﻿using System;
+﻿using Abp.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace GalaxyFlow.Entities
 {
-    class WorkFlowForm
+    public class WorkFlowForm : Entity<Guid>
     {
+        /// <summary>
+        /// 表单名称
+        /// </summary>
+        public string Name { get; set; }
+
+        /// <summary>
+        /// 表单分类
+        /// </summary>
+        public Guid Type { get; set; }
+
+        /// <summary>
+        /// 创建人ID
+        /// </summary>
+        public Guid CreateUserID { get; set; }
+
+        /// <summary>
+        /// 创建人姓名
+        /// </summary>
+        public string CreateUserName { get; set; }
+
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime CreateTime { get; set; }
+
+        /// <summary>
+        /// 最后修改时间
+        /// </summary>
+        public DateTime LastModifyTime { get; set; }
+
+        /// <summary>
+        /// 表单html
+        /// </summary>
+        public string Html { get; set; }
+
+        /// <summary>
+        /// 从表设置数据
+        /// </summary>
+        public string SubTableJson { get; set; }
+
+        /// <summary>
+        /// 事件设置
+        /// </summary>
+        public string EventsJson { get; set; }
+
+        /// <summary>
+        /// 相关属性
+        /// </summary>
+        public string Attribute { get; set; }
+
+        /// <summary>
+        /// 状态：0 保存 1 编译 2作废
+        /// </summary>
+        public int Status { get; set; }
+
     }
 }
