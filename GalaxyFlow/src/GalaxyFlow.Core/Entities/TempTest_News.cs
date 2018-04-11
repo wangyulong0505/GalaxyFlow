@@ -6,19 +6,19 @@ namespace GalaxyFlow.Entities
     public class TempTest_News : Entity
     {
         [MaxLength(500)]
-        public string Title { get; set; }
+        public virtual string Title { get; set; }
 
         [MaxLength(50)]
-        public string Title1 { get; set; }
+        public virtual string Title1 { get; set; }
 
         [MaxLength(50)]
-        public string UserID { get; set; }
+        public virtual string UserID { get; set; }
 
         [MaxLength(500)]
-        public string Type { get; set; }
+        public virtual string Type { get; set; }
 
-        public string Contents { get; set; }
+        public virtual string Contents { get; set; }
 
-        public int State { get; set; }
+        public virtual int State { get; set; }
     }
 }

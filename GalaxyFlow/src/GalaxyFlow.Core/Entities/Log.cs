@@ -6,29 +6,29 @@ namespace GalaxyFlow.Entities
 {
     public class Log : Entity<Guid>
     {
-        public string Title { get; set; }
+        public virtual string Title { get; set; }
 
         [MaxLength(50)]
-        public string Type { get; set; }
+        public virtual string Type { get; set; }
 
-        public DateTime WriteTime { get; set; }
+        public virtual DateTime WriteTime { get; set; }
 
-        public Guid UserID { get; set; }
-
-        [MaxLength(50)]
-        public string UserName { get; set; }
+        public virtual Guid? UserID { get; set; }
 
         [MaxLength(50)]
-        public string IPAddress { get; set; }
+        public virtual string UserName { get; set; }
 
-        public string URL { get; set; }
+        [MaxLength(50)]
+        public virtual string IPAddress { get; set; }
 
-        public string Contents { get; set; }
+        public virtual string URL { get; set; }
 
-        public string Others { get; set; }
+        public virtual string Contents { get; set; }
 
-        public string OldXml { get; set; }
+        public virtual string Others { get; set; }
 
-        public string NewXml { get; set; }
+        public virtual string OldXml { get; set; }
+
+        public virtual string NewXml { get; set; }
     }
 }

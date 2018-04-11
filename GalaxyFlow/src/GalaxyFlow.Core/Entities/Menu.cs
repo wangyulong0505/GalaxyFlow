@@ -6,22 +6,22 @@ namespace GalaxyFlow.Entities
 {
     public class Menu : Entity<Guid>
     {
-        public Guid ParentID { get; set; }
+        public virtual Guid ParentID { get; set; }
 
-        public Guid AppLibraryID { get; set; }
+        public virtual Guid? AppLibraryID { get; set; }
 
         [MaxLength(500)]
-        public string Title { get; set; }
+        public virtual string Title { get; set; }
 
         [MaxLength(5000)]
-        public string Params { get; set; }
+        public virtual string Params { get; set; }
 
         [MaxLength(500)]
-        public string Ico { get; set; }
+        public virtual string Ico { get; set; }
 
-        public int Sort { get; set; }
+        public virtual int Sort { get; set; }
 
         [MaxLength(50)]
-        public string IcoColor { get; set; }
+        public virtual string IcoColor { get; set; }
     }
 }

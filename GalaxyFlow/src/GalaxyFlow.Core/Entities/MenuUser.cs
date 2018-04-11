@@ -6,17 +6,17 @@ namespace GalaxyFlow.Entities
 {
     public class MenuUser : Entity<Guid>
     {
-        public Guid MenuID { get; set; }
+        public virtual Guid MenuID { get; set; }
 
-        public Guid SubPageID { get; set; }
+        public virtual Guid SubPageID { get; set; }
 
         [MaxLength(100)]
-        public string Organizes { get; set; }
+        public virtual string Organizes { get; set; }
 
-        public string Users { get; set; }
+        public virtual string Users { get; set; }
 
-        public string Buttons { get; set; }
+        public virtual string Buttons { get; set; }
 
-        public string Params { get; set; }
+        public virtual string Params { get; set; }
     }
 }

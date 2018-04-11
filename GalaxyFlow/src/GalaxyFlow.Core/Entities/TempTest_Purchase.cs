@@ -7,23 +7,23 @@ namespace GalaxyFlow.Entities
     public class TempTest_Purchase : Entity<Guid>
     {
         [MaxLength(500)]
-        public string Title { get; set; }
+        public virtual string Title { get; set; }
 
         [MaxLength(50)]
-        public string UserID { get; set; }
+        public virtual string UserID { get; set; }
 
         [MaxLength(50)]
-        public string UserDept { get; set; }
+        public virtual string UserDept { get; set; }
 
         [MaxLength(50)]
-        public string SqDateTime { get; set; }
+        public virtual string SqDateTime { get; set; }
 
         [MaxLength(500)]
-        public string TypeOther { get; set; }
+        public virtual string TypeOther { get; set; }
 
         [MaxLength(500)]
-        public string Note { get; set; }
+        public virtual string Note { get; set; }
 
-        public int IsCompleted { get; set; }
+        public virtual int? IsCompleted { get; set; }
     }
 }

@@ -6,37 +6,37 @@ namespace GalaxyFlow.Entities
 {
     public class ProgramBuilderQuerys : Entity<Guid>
     {
-        public Guid ProgramID { get; set; }
+        public virtual Guid ProgramID { get; set; }
 
         [MaxLength(500)]
-        public string Field { get; set; }
+        public virtual string Field { get; set; }
 
         [MaxLength(500)]
-        public string ShowTitle { get; set; }
+        public virtual string ShowTitle { get; set; }
 
         [MaxLength(50)]
-        public string Operators { get; set; }
+        public virtual string Operators { get; set; }
 
         [MaxLength(50)]
-        public string ControlName { get; set; }
+        public virtual string ControlName { get; set; }
 
-        public int InputType { get; set; }
-
-        [MaxLength(50)]
-        public string Width { get; set; }
-
-        public int Sort { get; set; }
-
-        public int DataSource { get; set; }
-
-        public string DataSourceString { get; set; }
+        public virtual int InputType { get; set; }
 
         [MaxLength(50)]
-        public string DataLinkID { get; set; }
+        public virtual string Width { get; set; }
 
-        public int IsQueryUsers { get; set; }
+        public virtual int Sort { get; set; }
+
+        public virtual int? DataSource { get; set; }
+
+        public virtual string DataSourceString { get; set; }
 
         [MaxLength(50)]
-        public string Value { get; set; }
+        public virtual string DataLinkID { get; set; }
+
+        public virtual int? IsQueryUsers { get; set; }
+
+        [MaxLength(50)]
+        public virtual string Value { get; set; }
     }
 }

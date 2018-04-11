@@ -8,20 +8,20 @@ namespace GalaxyFlow.Entities
 {
     public class SMSLog : Entity<Guid>
     {
-        public string MobileNumber { get; set; }
+        public virtual string MobileNumber { get; set; }
 
         [MaxLength(200)]
-        public string Contents { get; set; }
+        public virtual string Contents { get; set; }
 
-        public Guid SendUserID { get; set; }
+        public virtual Guid? SendUserID { get; set; }
 
         [MaxLength(500)]
-        public string SendUserName { get; set; }
+        public virtual string SendUserName { get; set; }
 
-        public DateTime SendTime { get; set; }
+        public virtual DateTime SendTime { get; set; }
 
-        public int Status { get; set; }
+        public virtual int Status { get; set; }
 
-        public string Note { get; set; }
+        public virtual string Note { get; set; }
     }
 }

@@ -10,16 +10,16 @@ namespace GalaxyFlow.Entities
         /// <summary>
         /// OrganizeID
         /// </summary>
-        public Guid OrganizeID { get; set; }
+        public virtual Guid OrganizeID { get; set; }
 
         /// <summary>
         /// IsMain
         /// </summary>
-        public int IsMain { get; set; }
+        public virtual int IsMain { get; set; }
 
         /// <summary>
         /// Sort
         /// </summary>
-        public int Sort { get; set; }
+        public virtual int Sort { get; set; }
     }
 }

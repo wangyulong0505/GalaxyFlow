@@ -6,17 +6,17 @@ namespace GalaxyFlow.Entities
 {
     public class DocumentDirectory : Entity<Guid>
     {
-        public Guid ParentID { get; set; }
+        public virtual Guid ParentID { get; set; }
 
         [MaxLength(500)]
-        public string Name { get; set; }
+        public virtual string Name { get; set; }
 
-        public string ReadUsers { get; set; }
+        public virtual string ReadUsers { get; set; }
 
-        public string ManageUsers { get; set; }
+        public virtual string ManageUsers { get; set; }
 
-        public string PublishUsers { get; set; }
+        public virtual string PublishUsers { get; set; }
 
-        public int Sort { get; set; }
+        public virtual int Sort { get; set; }
     }
 }

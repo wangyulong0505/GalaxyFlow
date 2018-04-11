@@ -7,10 +7,10 @@ namespace GalaxyFlow.Entities
 {
     public class UserShortcut : Entity<Guid>
     {
-        public Guid MenuID { get; set; }
+        public virtual Guid MenuID { get; set; }
 
-        public Guid UserID { get; set; }
+        public virtual Guid UserID { get; set; }
 
-        public int Sort { get; set; }
+        public virtual int Sort { get; set; }
     }
 }

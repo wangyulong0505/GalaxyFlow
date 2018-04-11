@@ -6,39 +6,39 @@ namespace GalaxyFlow.Entities
 {
     public class HomeItems : Entity<Guid>
     {
-        public int Type { get; set; }
+        public virtual int Type { get; set; }
 
         [MaxLength(500)]
-        public string Name { get; set; }
+        public virtual string Name { get; set; }
 
         [MaxLength(500)]
-        public string Title { get; set; }
+        public virtual string Title { get; set; }
 
-        public int DataSourceType { get; set; }
+        public virtual int DataSourceType { get; set; }
 
-        public string DataSource { get; set; }
+        public virtual string DataSource { get; set; }
 
         [MaxLength(2000)]
-        public string Ico { get; set; }
+        public virtual string Ico { get; set; }
 
         [MaxLength(50)]
-        public string BgColor { get; set; }
+        public virtual string BgColor { get; set; }
 
         [MaxLength(50)]
-        public string Color { get; set; }
+        public virtual string Color { get; set; }
 
-        public Guid DBConnID { get; set; }
-
-        [MaxLength(2000)]
-        public string LinkURL { get; set; }
-
-        public string UseOrganizes { get; set; }
-
-        public string UseUsers { get; set; }
-
-        public int Sort { get; set; }
+        public virtual Guid? DBConnID { get; set; }
 
         [MaxLength(2000)]
-        public string Note { get; set; }
+        public virtual string LinkURL { get; set; }
+
+        public virtual string UseOrganizes { get; set; }
+
+        public virtual string UseUsers { get; set; }
+
+        public virtual int? Sort { get; set; }
+
+        [MaxLength(2000)]
+        public virtual string Note { get; set; }
     }
 }

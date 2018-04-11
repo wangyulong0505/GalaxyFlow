@@ -6,27 +6,27 @@ namespace GalaxyFlow.Entities
 {
     public class TempTest_PurchaseList : Entity<Guid>
     {
-        public Guid PurchaseID { get; set; }
+        public virtual Guid PurchaseID { get; set; }
 
         [MaxLength(500)]
-        public string Name { get; set; }
+        public virtual string Name { get; set; }
 
         [MaxLength(50)]
-        public string Model { get; set; }
+        public virtual string Model { get; set; }
 
         [MaxLength(50)]
-        public string Unit { get; set; }
+        public virtual string Unit { get; set; }
 
-        public int Quantity { get; set; }
+        public virtual int? Quantity { get; set; }
 
-        public decimal Sum1 { get; set; }
+        public virtual decimal? Sum1 { get; set; }
 
-        public DateTime Date { get; set; }
-
-        [MaxLength(500)]
-        public string Type { get; set; }
+        public virtual DateTime? Date { get; set; }
 
         [MaxLength(500)]
-        public string Note { get; set; }
+        public virtual string Type { get; set; }
+
+        [MaxLength(500)]
+        public virtual string Note { get; set; }
     }
 }

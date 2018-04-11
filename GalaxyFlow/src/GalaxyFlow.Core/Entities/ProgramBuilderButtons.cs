@@ -6,22 +6,22 @@ namespace GalaxyFlow.Entities
 {
     public class ProgramBuilderButtons : Entity<Guid>
     {
-        public Guid ProgramID { get; set; }
+        public virtual Guid ProgramID { get; set; }
 
-        public Guid ButtonID { get; set; }
-
-        [MaxLength(200)]
-        public string ButtonName { get; set; }
-
-        public string ClientScript { get; set; }
+        public virtual Guid? ButtonID { get; set; }
 
         [MaxLength(200)]
-        public string Ico { get; set; }
+        public virtual string ButtonName { get; set; }
 
-        public int ShowType { get; set; }
+        public virtual string ClientScript { get; set; }
 
-        public int Sort { get; set; }
+        [MaxLength(200)]
+        public virtual string Ico { get; set; }
 
-        public int IsValidateShow { get; set; }
+        public virtual int ShowType { get; set; }
+
+        public virtual int Sort { get; set; }
+
+        public virtual int IsValidateShow { get; set; }
     }
 }

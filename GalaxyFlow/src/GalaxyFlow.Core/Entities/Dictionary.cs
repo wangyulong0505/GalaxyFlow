@@ -6,19 +6,19 @@ namespace GalaxyFlow.Entities
 {
     public class Dictionary : Entity<Guid>
     {
-        public Guid ParentID { get; set; }
+        public virtual Guid ParentID { get; set; }
 
-        public string Title { get; set; }
+        public virtual string Title { get; set; }
 
         [MaxLength(500)]
-        public string Code { get; set; }
+        public virtual string Code { get; set; }
 
-        public string Value { get; set; }
+        public virtual string Value { get; set; }
 
-        public string Note { get; set; }
+        public virtual string Note { get; set; }
 
-        public string Other { get; set; }
+        public virtual string Other { get; set; }
 
-        public int Sort { get; set; }
+        public virtual int Sort { get; set; }
     }
 }

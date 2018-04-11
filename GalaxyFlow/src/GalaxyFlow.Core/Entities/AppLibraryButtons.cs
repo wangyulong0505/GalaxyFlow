@@ -9,17 +9,17 @@ namespace GalaxyFlow.Entities
     public class AppLibraryButtons : Entity<Guid>
     {
         [MaxLength(50)]
-        public string Name { get; set; }
+        public virtual string Name { get; set; }
 
         [MaxLength(5000)]
-        public string Events { get; set; }
+        public virtual string Events { get; set; }
 
         [MaxLength(5000)]
-        public string Ico { get; set; }
+        public virtual string Ico { get; set; }
 
-        public int Sort { get; set; }
+        public virtual int Sort { get; set; }
 
         [MaxLength(500)]
-        public string Note { get; set; }
+        public virtual string Note { get; set; }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Abp.Domain.Entities;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace GalaxyFlow.Entities
@@ -10,26 +11,30 @@ namespace GalaxyFlow.Entities
         /// <summary>
         /// 标题
         /// </summary>
-        public string Title { get; set; }
+        /// 
+        [MaxLength(500)]
+        public virtual string Title { get; set; }
 
         /// <summary>
         /// 图标
         /// </summary>
-        public string Ico { get; set; }
+        /// 
+        [MaxLength(500)]
+        public virtual string Ico { get; set; }
 
         /// <summary>
         /// 脚本
         /// </summary>
-        public string Script { get; set; }
+        public virtual string Script { get; set; }
 
         /// <summary>
         /// 备注说明
         /// </summary>
-        public string Note { get; set; }
+        public virtual string Note { get; set; }
 
         /// <summary>
         /// 排序
         /// </summary>
-        public int Sort { get; set; }
+        public virtual int Sort { get; set; }
     }
 }

@@ -7,59 +7,59 @@ namespace GalaxyFlow.Entities
     public class ProgramBuilder : Entity<Guid>
     {
         [MaxLength(500)]
-        public string Name { get; set; }
+        public virtual string Name { get; set; }
 
-        public Guid Type { get; set; }
+        public virtual Guid Type { get; set; }
 
-        public DateTime CreateTime { get; set; }
+        public virtual DateTime CreateTime { get; set; }
 
-        public DateTime PublishTime { get; set; }
+        public virtual DateTime? PublishTime { get; set; }
 
-        public Guid CreateUser { get; set; }
+        public virtual Guid CreateUser { get; set; }
 
-        public string SQL { get; set; }
+        public virtual string SQL { get; set; }
 
-        public string IsAdd { get; set; }
+        public virtual string IsAdd { get; set; }
 
-        public Guid DBConnID { get; set; }
+        public virtual Guid DBConnID { get; set; }
 
-        public int Status { get; set; }
+        public virtual int Status { get; set; }
 
         [MaxLength(500)]
-        public string FormID { get; set; }
+        public virtual string FormID { get; set; }
 
-        public int EditModel { get; set; }
-
-        [MaxLength(50)]
-        public string Width { get; set; }
+        public virtual int? EditModel { get; set; }
 
         [MaxLength(50)]
-        public string Height { get; set; }
+        public virtual string Width { get; set; }
 
-        public int ButtonLocation { get; set; }
+        [MaxLength(50)]
+        public virtual string Height { get; set; }
 
-        public int IsPager { get; set; }
+        public virtual int? ButtonLocation { get; set; }
 
-        public string ClientScript { get; set; }
+        public virtual int? IsPager { get; set; }
+
+        public virtual string ClientScript { get; set; }
 
         [MaxLength(4000)]
-        public string ExportTemplate { get; set; }
+        public virtual string ExportTemplate { get; set; }
 
         [MaxLength(500)]
-        public string ExportHeaderText { get; set; }
+        public virtual string ExportHeaderText { get; set; }
 
         [MaxLength(500)]
-        public string ExportFileName { get; set; }
+        public virtual string ExportFileName { get; set; }
 
         [MaxLength(255)]
-        public string TableStyle { get; set; }
+        public virtual string TableStyle { get; set; }
 
-        public string TableHead { get; set; }
-
-        [MaxLength(500)]
-        public string TableName { get; set; }
+        public virtual string TableHead { get; set; }
 
         [MaxLength(500)]
-        public string InDataNumberFiledName { get; set; }
+        public virtual string TableName { get; set; }
+
+        [MaxLength(500)]
+        public virtual string InDataNumberFiledName { get; set; }
     }
 }

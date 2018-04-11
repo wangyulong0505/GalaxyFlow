@@ -8,20 +8,20 @@ namespace GalaxyFlow.Entities
 {
     public class AppLibrarySubPages : Entity<Guid>
     {
-        public Guid AppLibraryID { get; set; }
+        public virtual Guid AppLibraryID { get; set; }
 
         [MaxLength(500)]
-        public string Name { get; set; }
+        public virtual string Name { get; set; }
 
         [MaxLength(5000)]
-        public string Address { get; set; }
+        public virtual string Address { get; set; }
 
         [MaxLength(5000)]
-        public string Ico { get; set; }
+        public virtual string Ico { get; set; }
 
-        public int Sort { get; set; }
+        public virtual int Sort { get; set; }
 
         [MaxLength(2000)]
-        public string Note { get; set; }
+        public virtual string Note { get; set; }
     }
 }

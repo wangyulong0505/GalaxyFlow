@@ -6,37 +6,37 @@ namespace GalaxyFlow.Entities
 {
     public class Documents : Entity<Guid>
     {
-        public Guid DirectoryID { get; set; }
+        public virtual Guid DirectoryID { get; set; }
 
         [MaxLength(200)]
-        public string DirectoryName { get; set; }
+        public virtual string DirectoryName { get; set; }
 
         [MaxLength(300)]
-        public string Title { get; set; }
+        public virtual string Title { get; set; }
 
         [MaxLength(50)]
-        public string Source { get; set; }
+        public virtual string Source { get; set; }
 
-        public string Contents { get; set; }
+        public virtual string Contents { get; set; }
 
-        public string Files { get; set; }
+        public virtual string Files { get; set; }
 
-        public DateTime WriteTime { get; set; }
+        public virtual DateTime WriteTime { get; set; }
 
-        public Guid WriteUserID { get; set; }
-
-        [MaxLength(50)]
-        public string WriteUserName { get; set; }
-
-        public DateTime EditTime { get; set; }
-
-        public Guid EditUserID { get; set; }
+        public virtual Guid WriteUserID { get; set; }
 
         [MaxLength(50)]
-        public string EditUserName { get; set; }
+        public virtual string WriteUserName { get; set; }
 
-        public string ReadUsers { get; set; }
+        public virtual DateTime? EditTime { get; set; }
 
-        public int ReadCount { get; set; }
+        public virtual Guid? EditUserID { get; set; }
+
+        [MaxLength(50)]
+        public virtual string EditUserName { get; set; }
+
+        public virtual string ReadUsers { get; set; }
+
+        public virtual int ReadCount { get; set; }
     }
 }

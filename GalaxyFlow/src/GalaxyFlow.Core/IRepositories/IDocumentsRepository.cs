@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Abp.Domain.Repositories;
+using GalaxyFlow.Entities;
+using System;
 
 namespace GalaxyFlow.IRepositories
 {
-    interface IDocumentsRepository
+    public interface IDocumentsRepository : IRepository<Documents, Guid>
     {
     }
 }

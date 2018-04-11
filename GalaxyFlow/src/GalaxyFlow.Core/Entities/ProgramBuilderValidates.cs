@@ -8,17 +8,17 @@ namespace GalaxyFlow.Entities
 {
     public class ProgramBuilderValidates : Entity<Guid>
     {
-        public Guid ProgramID { get; set; }
+        public virtual Guid ProgramID { get; set; }
 
         [MaxLength(500)]
-        public string TableName { get; set; }
+        public virtual string TableName { get; set; }
 
         [MaxLength(500)]
-        public string FieldName { get; set; }
+        public virtual string FieldName { get; set; }
 
         [MaxLength(500)]
-        public string FieldNote { get; set; }
+        public virtual string FieldNote { get; set; }
 
-        public int Validate { get; set; }
+        public virtual int Validate { get; set; }
     }
 }

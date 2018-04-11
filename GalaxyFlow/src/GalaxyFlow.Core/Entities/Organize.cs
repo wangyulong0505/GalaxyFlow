@@ -7,31 +7,31 @@ namespace GalaxyFlow.Entities
     public class Organize : Entity<Guid>
     {
         [MaxLength(2000)]
-        public string Name { get; set; }
+        public virtual string Name { get; set; }
 
         [MaxLength(900)]
-        public string Number { get; set; }
+        public virtual string Number { get; set; }
 
-        public int Type { get; set; }
+        public virtual int Type { get; set; }
 
-        public int Status { get; set; }
+        public virtual int Status { get; set; }
 
-        public Guid ParentID { get; set; }
+        public virtual Guid ParentID { get; set; }
 
-        public int Sort { get; set; }
+        public virtual int Sort { get; set; }
 
-        public int Depth { get; set; }
+        public virtual int Depth { get; set; }
 
-        public int ChildsLength { get; set; }
-
-        [MaxLength(200)]
-        public string ChargeLeader { get; set; }
+        public virtual int ChildsLength { get; set; }
 
         [MaxLength(200)]
-        public string Leader { get; set; }
+        public virtual string ChargeLeader { get; set; }
 
-        public string Note { get; set; }
+        [MaxLength(200)]
+        public virtual string Leader { get; set; }
 
-        public int IntID { get; set; }
+        public virtual string Note { get; set; }
+
+        public virtual int IntID { get; set; }
     }
 }

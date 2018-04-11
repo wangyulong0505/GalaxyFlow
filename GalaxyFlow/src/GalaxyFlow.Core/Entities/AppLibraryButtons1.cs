@@ -8,25 +8,25 @@ namespace GalaxyFlow.Entities
 {
     public class AppLibraryButtons1 : Entity<Guid>
     {
-        public Guid AppLibraryID { get; set; }
+        public virtual Guid AppLibraryID { get; set; }
 
-        public Guid ButtonID { get; set; }
+        public virtual Guid? ButtonID { get; set; }
 
         [MaxLength(500)]
-        public string Name { get; set; }
+        public virtual string Name { get; set; }
 
         [MaxLength(5000)]
-        public string Events { get; set; }
+        public virtual string Events { get; set; }
 
         [MaxLength(2000)]
-        public string Ico { get; set; }
+        public virtual string Ico { get; set; }
 
-        public int Sort { get; set; }
+        public virtual int Sort { get; set; }
 
-        public int Type { get; set; }
+        public virtual int Type { get; set; }
 
-        public int ShowType { get; set; }
+        public virtual int ShowType { get; set; }
 
-        public int IsValidateShow { get; set; }
+        public virtual int IsValidateShow { get; set; }
     }
 }
