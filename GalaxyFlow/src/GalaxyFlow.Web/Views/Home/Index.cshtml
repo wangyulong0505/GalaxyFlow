@@ -1,23 +1,347 @@
-﻿@using GalaxyFlow.Web.Startup
-@{
-    ViewBag.ActiveMenu = PageNames.Home;
+﻿@section styles{ 
+    <link href="~/css/base.css" rel="stylesheet" asp-append-version="true" />
 }
 
-@section scripts
-{
-    <environment names="Development">
-        <script src="~/js/views/home/index.js"></script>
-    </environment>
+<div class="content-wrapper" style="min-height: 1126px;">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            User Profile
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">Examples</a></li>
+            <li class="active">User profile</li>
+        </ol>
+    </section>
 
-    <environment names="Staging,Production">
-        <script src="~/js/views/home/index.min.js"></script>
-    </environment>
-}
+    <!-- Main content -->
+    <section class="content">
 
-<h2>@L("HelloWorld")!</h2>
+        <div class="row">
+            <div class="col-md-3">
 
-<div class="row">
-    <div class="col-lg-12">
-        @L("Home_Description")
-    </div>
+                <!-- Profile Image -->
+                <div class="box box-primary">
+                    <div class="box-body box-profile">
+                        <img class="profile-user-img img-responsive img-circle" src="~/images/photo.jpg" alt="User profile picture">
+
+                        <h3 class="profile-username text-center">wangshibang</h3>
+
+                        <p class="text-muted text-center">Software Engineer</p>
+
+                        <ul class="list-group list-group-unbordered">
+                            <li class="list-group-item">
+                                <b>Followers</b> <a class="pull-right">1,322</a>
+                            </li>
+                            <li class="list-group-item">
+                                <b>Following</b> <a class="pull-right">543</a>
+                            </li>
+                            <li class="list-group-item">
+                                <b>Friends</b> <a class="pull-right">13,287</a>
+                            </li>
+                        </ul>
+
+                        <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+                <!-- About Me Box -->
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">About Me</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <strong><i class="fa fa-book margin-r-5"></i> Education</strong>
+
+                        <p class="text-muted">
+                            <strong>2011-09 ---- 2013-06</strong><br/>
+                            洛阳理工学院
+                        </p>
+
+                        <hr>
+
+                        <strong><i class="fa fa-map-marker margin-r-5"></i> Location</strong>
+
+                        <p class="text-muted"><strong>深圳市, 南山区</strong></p>
+
+                        <hr>
+
+                        <strong><i class="fa fa-pencil margin-r-5"></i> Skills</strong>
+
+                        <p>
+                            <span class="label label-sm label-danger">C#</span>
+                            <span class="label label-sm label-danger">Java</span>
+                            <span class="label label-sm label-danger">Python</span>
+                        </p>
+                        <p>
+                            <span class="label label-sm label-success">.NetCore</span>
+                            <span class="label label-sm label-success">WPF</span>
+                            <span class="label label-sm label-success">EF</span>
+                            <span class="label label-sm label-success">WCF</span>
+                            <span class="label label-sm label-success">微信小程序</span>
+                            <span class="label label-sm label-success">Android</span>
+                        </p>
+                        <p>
+                            <span class="label label-sm label-info">Javascript</span>
+                            <span class="label label-sm label-info">Bootstrap</span>
+                            <span class="label label-sm label-info">AngularJS</span>
+                            <span class="label label-sm label-info">VueJS</span>
+                            <span class="label label-sm label-info">Node.js</span>
+                        </p>
+                        <p>
+                            <span class="label label-sm label-warning">Oracle</span>
+                            <span class="label label-sm label-warning">Mysql</span>
+                            <span class="label label-sm label-warning">Sql Server</span>
+                            <span class="label label-sm label-warning">Redis</span>
+                            <span class="label label-sm label-warning">MongoDB</span>
+                        </p>
+                        <p>
+                            <span class="label label-sm label-primary">设计模式</span>
+                            <span class="label label-sm label-primary">数据结构</span>
+                            <span class="label label-sm label-primary">数据库</span>
+                            <span class="label label-sm label-primary">计算机网络</span>
+                            <span class="label label-sm label-primary">项目管理</span>
+                            <span class="label label-sm label-primary">软件测试</span>
+                        </p>
+                        <hr>
+
+                        <strong><i class="fa fa-file-text-o margin-r-5"></i> Hobbies</strong>
+
+                        <p>兴趣广泛, 诗词歌赋, 旅游, 美食, 交友</p>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+            <!-- /.col -->
+            <div class="col-md-9">
+                <div class="nav-tabs-custom">
+                    <ul class="nav nav-tabs">
+                        <li class=""><a href="#activity" data-toggle="tab" aria-expanded="false">工作经历</a></li>
+                        <li class="active"><a href="#timeline" data-toggle="tab" aria-expanded="true">项目经历</a></li>
+                        <li class=""><a href="#settings" data-toggle="tab" aria-expanded="false">账号设置</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane" id="activity">
+                            <ul class="timeline timeline-inverse">
+                                <!-- timeline time label -->
+                                <li class="time-label">
+                                    <span class="bg-red">
+                                        至今
+                                    </span>
+                                </li>
+                                <!-- /.timeline-label -->
+                                <!-- timeline item -->
+                                <li>
+                                    <i class="fa fa-user bg-aqua"></i>
+
+                                    <div class="timeline-item">
+                                        <span class="time"><i class="fa fa-clock-o"></i> 2 years ago</span>
+
+                                        <h3 class="timeline-header no-border">
+                                            <a href="https://baike.baidu.com/item/方特投资发展有限公司/8736415?fr=aladdin">方特投资发展有限公司</a> 
+                                        </h3>
+                                    </div>
+                                </li>
+                                <!-- END timeline item -->
+                                <!-- END timeline item -->
+                                <!-- timeline time label -->
+                                <li class="time-label">
+                                    <span class="bg-green">
+                                        2016-05-09
+                                    </span>
+                                </li>
+                                <!-- /.timeline-label -->
+                                <!-- timeline item -->
+                                <li>
+                                    <i class="fa fa-user bg-purple"></i>
+
+                                    <div class="timeline-item">
+                                        <span class="time"><i class="fa fa-clock-o"></i> 4 years ago</span>
+
+                                        <h3 class="timeline-header"><a href="https://baike.baidu.com/item/深圳市赛普爱德科技股份有限公司/19391945">深圳市赛普爱德科技股份有限公司</a></h3>
+
+                                    </div>
+                                </li>
+                                <!-- END timeline item -->
+                                <li>
+                                    <i class="fa fa-clock-o bg-gray"></i>
+                                </li>
+                            </ul>
+                            <!-- /.post -->
+                        </div>
+                        <!-- /.tab-pane -->
+                        <div class="tab-pane active" id="timeline">
+                            <!-- The timeline -->
+                            <ul class="timeline timeline-inverse">
+                                <!-- timeline time label -->
+                                <li class="time-label">
+                                    <span class="bg-red">
+                                        至今
+                                    </span>
+                                </li>
+                                <!-- /.timeline-label -->
+                                <!-- timeline item -->
+                                <li>
+                                    <i class="fa fa-camera bg-purple"></i>
+
+                                    <div class="timeline-item">
+                                        <span class="time"><i class="fa fa-clock-o"></i> 2 days ago</span>
+
+                                        <h3 class="timeline-header"><a href="#">Wangshibang</a> Galaxy</h3>
+
+                                        <div class="timeline-body">
+                                            <img src="~/images/galaxy01.png" style="width:150px; height:100px;" alt="..." class="margin">
+                                            <img src="~/images/galaxy02.png" style="width:150px; height:100px;" alt="..." class="margin">
+                                            <img src="~/images/galaxy03.png" style="width:150px; height:100px;" alt="..." class="margin">
+                                            <img src="~/images/galaxy04.png" style="width:150px; height:100px;" alt="..." class="margin">
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- END timeline item -->
+                                <li class="time-label">
+                                    <span class="bg-green">
+                                        2017-10-20
+                                    </span>
+                                </li>
+                                <!-- timeline item -->
+                                <li>
+                                    <i class="fa fa-camera bg-purple"></i>
+
+                                    <div class="timeline-item">
+                                        <span class="time"><i class="fa fa-clock-o"></i> 2 days ago</span>
+
+                                        <h3 class="timeline-header"><a href="#">Wangshibang</a>华强方特招聘测试系统</h3>
+
+                                        <div class="timeline-body">
+                                            <img src="~/images/fttp01.png" style="width:150px; height:100px;" alt="..." class="margin">
+                                            <img src="~/images/fttp02.png" style="width:150px; height:100px;" alt="..." class="margin">
+                                            <img src="~/images/fttp03.png" style="width:150px; height:100px;" alt="..." class="margin">
+                                            <img src="~/images/fttp04.png" style="width:150px; height:100px;" alt="..." class="margin">
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- END timeline item -->
+                                <li class="time-label">
+                                    <span class="bg-green">
+                                        2016-10-20
+                                    </span>
+                                </li>
+                                <!-- timeline item -->
+                                <li>
+                                    <i class="fa fa-camera bg-purple"></i>
+
+                                    <div class="timeline-item">
+                                        <span class="time"><i class="fa fa-clock-o"></i> 2 days ago</span>
+
+                                        <h3 class="timeline-header"><a href="#">Wangshibang</a> 华强方特微信平台系统</h3>
+
+                                        <div class="timeline-body">
+                                            <img src="~/images/ftwx01.jpg" style="width:150px; height:100px;" alt="..." class="margin">
+                                            <img src="~/images/ftwx02.png" style="width:150px; height:100px;" alt="..." class="margin">
+                                            <img src="~/images/ftwx03.png" style="width:150px; height:100px;" alt="..." class="margin">
+                                            <img src="~/images/ftwx04.png" style="width:150px; height:100px;" alt="..." class="margin">
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- END timeline item -->
+                                <!-- timeline time label -->
+                                <li class="time-label">
+                                    <span class="bg-green">
+                                        2016-05-09
+                                    </span>
+                                </li>
+                                <!-- /.timeline-label -->
+                                <!-- timeline item -->
+                                <li>
+                                    <i class="fa fa-camera bg-purple"></i>
+
+                                    <div class="timeline-item">
+                                        <span class="time"><i class="fa fa-clock-o"></i> 2 days ago</span>
+
+                                        <h3 class="timeline-header"><a href="#">Mina Lee</a> uploaded new photos</h3>
+
+                                        <div class="timeline-body">
+                                            <img src="http://placehold.it/150x100" alt="..." class="margin">
+                                            <img src="http://placehold.it/150x100" alt="..." class="margin">
+                                            <img src="http://placehold.it/150x100" alt="..." class="margin">
+                                            <img src="http://placehold.it/150x100" alt="..." class="margin">
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- END timeline item -->
+                                <li>
+                                    <i class="fa fa-clock-o bg-gray"></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.tab-pane -->
+                        <div class="tab-pane" id="settings">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="inputName" class="col-sm-2 control-label">用户名</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="UserName" value="@User.Identity.Name" disabled="disabled"  placeholder="Name" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Email" class="col-sm-2 control-label">邮箱</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="Email" disabled="disabled" placeholder="Email" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="oldPassword" class="col-sm-2 control-label">旧密码</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="oldPassword" placeholder="旧密码" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="newPassword" class="col-sm-2 control-label">新密码</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="newPassword" placeholder="新密码" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Repassword" class="col-sm-2 control-label">确认新密码</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="Repassword" placeholder="确认新密码" />
+                                    </div>
+                                </div>
+                                @*<div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> I agree to the <a href="#">terms and conditions</a>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>*@
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button type="submit" class="btn btn-danger">提交</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- /.tab-pane -->
+                    </div>
+                    <!-- /.tab-content -->
+                </div>
+                <!-- /.nav-tabs-custom -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+
+    </section>
+    <!-- /.content -->
 </div>
